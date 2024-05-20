@@ -1,0 +1,507 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #2B2F77;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#top {
+    background-color: #23123a;
+    width: 100%;
+    height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.main-header h1 {
+    font-size: 2em; /* Reduced size for better fit on mobile */
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+nav ul {
+    display: flex;
+    height: 45px;
+    margin: 0;
+}
+
+nav ul li {
+    flex: 1;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li a {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits color from the parent element */
+    cursor: pointer; /* Ensures the cursor changes to pointer */
+}
+
+nav ul li a:visited,
+nav ul li a:hover,
+nav ul li a:active,
+nav ul li a:focus {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Inherits color from the parent element */
+  outline: none; /* Removes the outline on focus */
+}
+
+#hero {
+    min-height: 531px;
+    width: 100%;
+    background: url("./images/hero.webp") no-repeat center center/cover;
+    position: relative;
+    height: 44vw;
+}
+
+.cover-text {
+    /* Final rgba value sets the opacity so it is semi-transparent */
+    position: absolute;
+    left: 60px;
+    top: 63px;
+    min-width: 200px;
+}
+
+.cover-text>h2,
+.cover-text>h1 {
+    color: #ffffff;
+    font-family: 'Proxima Nova';
+    font-weight: 400;
+    margin: 0;
+    display: block;
+
+}
+
+.card-promotion {
+    background-color: #F4F4F4;
+    padding: 50px;
+    text-align: left;
+}
+
+.card-promotion h2 {
+    margin: 0;
+    font-size: 30px;
+    color: #373737;
+    font-weight: bold;
+}
+
+.card-details {
+    background-color: white;
+    padding: 45px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 30px;
+}
+
+.card-details h3 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+    color: #373737;
+    font-family: "Proxima Nova";
+    font-weight: 400;
+}
+
+.card-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styles for the container of the star rating component */
+.star-rating {
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+  
+.star-rating input {
+    display: none;
+}
+
+/* Styles for the label elements used to display stars */
+.star-rating label {
+    color: #d5e2e2;
+    font-size: 18px;
+    padding: 0 0.1rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+/* Styles for the selected star */
+.star-rating input:checked ~ label {
+    color: #59d8d1;
+}
+
+/* Styles for hover effects on stars */
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label:hover,
+.star-rating input:checked ~ label:hover ~ label,
+.star-rating input:checked ~ label:hover ~ label ~ label {
+    color: #59d8d1;
+}
+
+.review-rate {
+    display: flex;
+    align-items: baseline;
+}
+
+.review-rate span {
+    margin-left: 13px;
+    font-size: 15px;
+    line-height: 20px;
+    color: #000000;
+    font-family: "Proxima Nova";
+    vertical-align: sub;
+}
+
+.card-details p {
+    color: #666;
+}
+
+button {
+    background-color: #0084FF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Full width button on mobile */
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+    display: block; /* Make the link block level for easier touch */
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    width: 2px;
+    margin: 3px 0;
+    background: #ececec;
+    height: 38px;
+}
+
+.horizon-divider {
+    width: 100%;
+    margin: 3px 0;
+    margin-top: 20px;
+    background: #b0c7cf;
+    height: 1px;
+}
+
+.rate-fee-detail {
+    font-size: 18px;
+    line-height: 34px;
+    color: #1194f6;
+    font-family: "Proxima Nova";
+}
+
+.card-info {
+    margin-top: 28px;
+    display: flex;
+}
+
+.card-info-left {
+    width: 270px;
+}
+
+.card-visa-status {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-visa-status img {
+    flex: 1;
+    max-width: 250px;
+}
+
+.card-visa-status-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.card-status-badge {
+    margin-top: 1em;
+    height: 29px;
+    border-radius: 15px;
+    background-color: #59d8d1;
+    font-weight: bold;
+    color: #fff;
+    padding-left: 8px;
+    padding-right: 8px;
+    align-items: center;
+    display: flex;
+}
+
+.apply-button {
+    font-size: 15px;
+    line-height: 24px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: "Proxima Nova";
+    background-color: #fa6e3d;
+    border-radius: 5px;
+    height: 40px;
+    margin-top: 24px;
+}
+
+.card-info-right {
+    margin-left: 48px;
+}
+
+.card-info-right p,
+.card-info-right .card-info-container p {
+    margin: 0;
+    /* margin-top: 20px; */
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+    font-family: "Proxima Nova";
+}
+
+.card-info-right .card-info-container p:first-child {
+    margin: 0;
+}
+
+.card-info-right {
+    flex: 1;
+}
+
+.card-info-container {
+    position: relative;
+    height: auto;
+    border-top: 0;
+}
+
+/* Styles for the 'Show more' button */
+#check-showmore[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+}
+
+#check-showmore + label {
+    background: transparent;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    position: absolute;
+    transition: top .45s cubic-bezier(.44, .99, .48, 1);
+    bottom: 0;
+    text-align: right;
+}
+
+#check-showmore + label:before {
+    content: "...";
+    color: #000;
+    background: white;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#check-showmore + label:after {
+  color: #1194f6;
+  background: white;
+  content: 'Show more';
+}
+
+#check-showmore[type="checkbox"] ~ .wrap-info {
+    margin-bottom: 20px;
+    width: 100%;
+    overflow: hidden;
+    max-height: 6em;
+    transition: max-height .05s cubic-bezier(.44, .99, .48, 1);
+}
+
+#check-showmore[type="checkbox"]:checked ~ .wrap-info {
+    max-height: 500px;
+    margin-bottom: 20px;
+}
+
+#check-showmore[type="checkbox"]:checked + label {
+    top: 100%;
+}
+
+#check-showmore[type="checkbox"]:checked + label::after {
+    top: 5px;
+    content: 'Show less';
+}
+
+#check-showmore[type="checkbox"]:checked + label::before {
+    top: 5px;
+    content: '';
+}
+
+@media only screen and (max-width: 600px) {
+    .main-header h1 {
+        font-size: 1.5em;
+    }
+    
+    .card-promotion, .card-details {
+        padding: 10px;
+        padding-top: 20px;
+    }
+
+    #hero {
+        min-height: 410px;
+        width: 100%;
+        background: url("./images/mobile-hero.webp") no-repeat center center/cover;
+        position: relative;
+        height: 128vw;
+    }
+
+    .cover-text {
+        position: absolute;
+        left: 30px;
+        top: 33px;
+    }
+
+    .cover-text>h2,
+    .cover-text>h1 {
+        color: #ffffff;
+        font-size: 53px;
+        font-family: 'Proxima Nova';
+        font-weight: bold;
+        margin: 0;
+        display: block;
+        line-height: 1.4em;
+    }
+
+    .card-promotion {
+        background-color: #F4F4F4;
+        padding-top: 30px;
+        padding-left: 17px;
+        text-align: left;
+    }
+    
+    .card-promotion h2 {
+        margin: 0;
+        font-size: 18px;
+        color: #373737;
+        font-weight: bold;
+        line-height: 1.8em;
+    }
+
+    .card-details h3 {
+        margin: 0;
+        font-size: 17px;
+        line-height: 20px;
+        color: #373737;
+        font-family: "Proxima Nova";
+        font-weight: 400;
+    }
+
+    .card-info {
+        display: block;
+        margin-top: 15px;
+    }
+
+    .card-info-left {
+        width: 100%;
+    }
+
+    .card-info-left button {
+        display: none;
+    }
+
+    .card-info-right {
+        margin-left: 0;
+        margin-top: 28px;
+    }
+
+    .card-details button {
+        margin-top: 5px;
+    }
+
+    .card-info-right p,
+    .card-info-right .card-info-container p {
+        margin: 0;
+        margin-bottom: 5px;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1.3em;
+        color: #000000;
+        font-family: "Proxima Nova";
+    }
+
+    .rate-fee-detail {
+        font-size: 15px;
+        line-height: 34px;
+        color: #1194f6;
+        font-family: "Proxima Nova";
+    }
+
+    .desktop {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .cover-text>h1 {
+        font-size: 80px;
+    }
+
+    .mobile {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 600px){
+    .card-details{
+        padding: 30px;
+    }
+
+    .card-info-right {
+        margin-left: 24px;
+    }
+}
+
+@media only screen and (max-width: 866px) {
+    .review-rate {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1240px) {
+    .cover-text>h1 {
+        font-size: 132px;
+    }
+
+    .mobile {
+        display: none;
+    }
+}

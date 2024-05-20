@@ -1,0 +1,25 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "baseUrl": "./src",
+        "outDir": "./dist",
+        "strict": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "esnext",
+        "importHelpers": true,
+        "target": "es2015",
+        "noImplicitAny": false,
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "lib": [
+            "es2018",
+            "dom"
+        ],
+        "jsx": "react"
+    }
+}
